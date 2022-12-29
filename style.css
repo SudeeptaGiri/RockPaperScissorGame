@@ -1,0 +1,78 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	height: 100vh;
+	background-color: cadetblue;
+	color: aliceblue;
+}
+.score {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: 20px;
+}
+
+.match {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.options button {
+	background-color: #a0615f;
+	color: cadetblue;
+	padding: 15px 50px;
+	font-size: 18px;
+	font-weight: 600;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+#winner {
+	font-size: 36px;
+	font-weight: 900;
+	color: brown;
+}
+#pl-sc {
+	color: blue;
+	font-size: 30px;
+	text-align: center;
+}
+#co-sc {
+	color: coral;
+	font-size: 30px;
+	text-align: center;
+}
+.player-hand {
+	transform: rotateY(180deg);
+}
+
+.hands {
+	animation-name: shake;
+	animation-duration: 1s;
+	animation-iteration-count: 2;
+}
+@keyframes shake {
+	0% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(5px);
+	}
+	50% {
+		transform: translateY(-5px);
+	}
+	75% {
+		transform: translateY(5px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
